@@ -1,0 +1,15 @@
+<img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+class="img-fluid" alt="Sample image"> <br>
+ID: <br>
+<input type="number" [(ngModel)]="id"> <br>
+
+Username by email:<br>
+<input type="email" [(ngModel)]="username"> <br>
+
+Role: <br>
+<input type="string" [(ngModel)]="role">   <br>
+
+
+<button class="log_but" id="submit"(click)="editFunc()">Submit</button>
+
+<a class="nav-link" routerLink="/login">signout</a>
