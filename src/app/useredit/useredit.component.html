@@ -1,0 +1,13 @@
+<h3>Edit User</h3>
+
+User Name:<br>
+<input type="text" [(ngModel)]="new.username"> <br> User Role:<br>
+<select [(ngModel)]="new.role">
+    <option>Super</option>
+    <option>Group</option>
+    <option>Assistant</option>
+</select><br> User Email: <br>
+<input type="text" [(ngModel)]="new.email"> <br> User Password: <br>
+<input type="number" [(ngModel)]="new.password"><br>
+
+<button class="submit" id="saveEdit" (click)="editfunc()">Save Edit</button>

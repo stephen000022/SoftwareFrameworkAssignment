@@ -1,0 +1,12 @@
+<h3>Create User</h3>
+<br> User Name:<br>
+<input type="text" [(ngModel)]="newuser.username"> <br> User Role:<br>
+<select [(ngModel)]="newuser.role">
+    <option>Super</option>
+    <option>Group</option>
+    <option>Assistant</option>
+</select><br> User Email: <br>
+<input type="text" [(ngModel)]="newuser.email"> <br> User Password: <br>
+<input type="text" [(ngModel)]="newuser.password"> <br>
+
+<button class="submit" id="insert" (click)="adduser()">Create User</button>

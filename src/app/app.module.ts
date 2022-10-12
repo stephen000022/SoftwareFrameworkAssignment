@@ -8,13 +8,18 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { GroupComponent } from './group/group.component';
+import { UserService } from './user.service';
+import { RegisterComponent } from './register/register.component';
+import { UsereditComponent } from './useredit/useredit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ProfileComponent,
-    GroupComponent
+    GroupComponent,
+    RegisterComponent,
+    UsereditComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +27,7 @@ import { GroupComponent } from './group/group.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

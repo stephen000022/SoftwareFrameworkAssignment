@@ -1,15 +1,25 @@
 <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
 class="img-fluid" alt="Sample image"> <br>
-ID: <br>
-<input type="number" [(ngModel)]="id"> <br>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <td> User Name </td>
+            <td> User Role </td>
+            <td> User Email </td>
+            <button (click)="getUser()" class="btn btn-danger"> show proflie</button> 
+            <td></td>
+        </tr>
+    </thead>
 
-Username by email:<br>
-<input type="email" [(ngModel)]="username"> <br>
-
-Role: <br>
-<input type="string" [(ngModel)]="role">   <br>
-
-
-<button class="log_but" id="submit"(click)="editFunc()">Submit</button>
-
-<a class="nav-link" routerLink="/login">signout</a>
+    <tbody>
+        <tr *ngFor="let users of user">
+            <td>{{ users.username }}</td>
+            <td>{{ users.role }}</td>
+            <td>{{ users.email }}</td>
+            <td><button (click)="deleteUser(users)" class="btn btn-danger"> Delete</button></td>
+            <td><button (click)="updateUser(users)" class="btn btn-primary"> Edit</button></td>
+        </tr>
+        <a class="nav-link" routerLink="/register">Add data</a><br>
+        <a class="nav-link" routerLink="/group">Group</a>
+    </tbody>
+</table>
